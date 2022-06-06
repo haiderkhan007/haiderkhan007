@@ -1,0 +1,12 @@
+---
+- hosts: 192.168.2.8
+  become: true
+  tasks:
+  - name: installing updates
+    apt:
+      update_cache: yes
+
+  - name: installing nginx
+    apt:
+      name: nginx
+      state: latest
